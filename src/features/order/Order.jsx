@@ -21,7 +21,6 @@ export async function loader({ params, request }) {
 // ------------------------------------------------------
 function Order() {
   const fetcher = useFetcher();
-
   useEffect(() => {
     if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");
   }, [fetcher]);

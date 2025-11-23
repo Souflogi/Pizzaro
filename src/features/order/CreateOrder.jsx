@@ -128,7 +128,7 @@ function CreateOrder() {
           </div>
           {!userLocationInfos?.position && (
             <Button
-              disabled={isAddressLoading}
+              disabled={isSubmitting || isAddressLoading}
               type="button"
               onClick={addressLocationHandler}
               className="absolute right-1 z-10 md:top-px md:right-0"
